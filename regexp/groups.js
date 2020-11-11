@@ -1,6 +1,6 @@
 
 /**
- * 替换字符串
+ * 替换字符串；捕获组 练习
  * 将 {} 分别替换为 <span></span>
  * * 正则表达式 "捕获组" https://zh.javascript.info/regexp-groups
  */ 

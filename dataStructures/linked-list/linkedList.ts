@@ -94,7 +94,7 @@ export default class LinedList<T>{
 
   // 返回链表包含的元素个数，与数组的 length 属性类似。
   size() {
-
+    return this.count;
   }
 
   /**

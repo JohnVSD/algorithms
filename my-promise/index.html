@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>自定义实现 Pormise</title>
+</head>
+<body>
+  <p>实现一个 Promise</p>
+  <!-- <scrip src="./my-promise.js"></scrip> -->
+  <script>
+    import MyPromise from ('./my-promise');
+
+    const p = new MyPromise((resolve, reject) => {
+      resolve('success');
+      reject('error');
+    });
+
+    p.then(res => {
+      console.log('成功了：', res);
+    }, err => {
+      console.log('失败原因：', err);
+    });
+  </script>
+</body>
+</html>

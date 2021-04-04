@@ -44,7 +44,7 @@ function createRequest(pool = 5) {
 	};
 }
 const url = 'https://www.typescriptlang.org/page-data/tools/page-data.json';
-// const url = './ts.json';
+// const url = './data.json';
 let request = createRequest(3);
 Array(10)
 	.fill(1)

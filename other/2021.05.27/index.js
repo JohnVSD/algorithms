@@ -1,4 +1,6 @@
-// 实现 mergePromise 函数，把传进去的数组顺序先后执行，并且把返回的数据先后放到数组 data 中
+/**
+ * todo 实现 mergePromise 函数，把传进去的数组顺序先后执行，并且把返回的数据先后放到数组 data 中
+ */
 
 const timeout = (ms) =>
 	new Promise((resolve, reject) => {
@@ -25,8 +27,17 @@ const ajax3 = () =>
 		return 3;
 	});
 
-const mergePromise = (ajaxArray) => {
-	// 在这里实现你的代码
+const mergePromise = async (ajaxArray) => {
+	/**
+	 * !在这里实现你的代码
+	 * * 以下为我的代码实现，利用 async、await 和 for ... of 配合
+	 */
+	let data = [];
+	for (const ajax of ajaxArray) {
+		const res = await ajax();
+		data.push(res);
+	}
+	return data;
 };
 
 mergePromise([ajax1, ajax2, ajax3]).then((data) => {

@@ -29,7 +29,7 @@ var mySqrt = function (x) {
     }
   }
 
-    return res;
+  return res;
 };
 ```
 

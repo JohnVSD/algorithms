@@ -16,13 +16,18 @@ function retry(func, times, interval) {
       
       console.log(`请求失败，重试中...${retryTimes}/${times}，耗时 ${interval}`);
       let timer = setTimeout(() => {
-        timer = null;
+        clearTimeout(timer);
         _func(executeFn);
       }, interval);
     }
   } 
 
-  _func(func);
+  return _func(func);
 }
 
-retry(null, 5, 2000);
+retry(() => {
+  setTimeout(() => {
+    return console.log('正确了');
+  }, 3000);
+  // throw new Error('报错');
+}, 5, 2000);

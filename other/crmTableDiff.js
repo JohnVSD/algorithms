@@ -1,3 +1,5 @@
+// 开发 CRM 时遇到的 表格单值对比、多维对比 情况
+
 const originData = {
 	currentValue: [
 		{ 设备: 'ALL', 当日值: '27,753,119' },

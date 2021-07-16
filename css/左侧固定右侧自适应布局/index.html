@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>左侧固定，右侧自适应</title>
+  <style>
+    /* 公共样式 */
+    * { padding: 0; margin: 0; }
+    .wrapper {
+      background: #e0e2e2;
+      height: 300px;
+      width: 100%;
+      margin-bottom: 15px;
+      padding: 15px;
+      box-sizing: border-box;
+    }
+    .wrapper .left {
+      width: 200px;
+    }
+    .wrapper .left, 
+    .wrapper .right {
+      height: 270px;
+      border-radius: 10px;
+      background: #fff;
+    }
+    /* 第 1 种 flex */
+    .item-one {
+      display: flex;
+    }
+    .item-one .left {
+      flex-shrink: 1;
+    }
+    .item-one .right {
+      flex-grow: 1;
+      margin-left: 20px;
+    }
+    /* 第 2 种 float */
+    .item-two {
+      overflow: auto;
+    }
+    .item-two .left {
+      float: left;
+    }
+    .item-two .right {
+      float: right;
+      width: calc(100% - 220px);
+    }
+    /* 第 3 种 position */
+    .item-three {
+      position: relative;
+    }
+    .item-three .left {
+      position: absolute;
+    }
+    .item-three .right {
+      margin-left: 220px;
+      width: calc(100% - 220px);
+    }
+  </style>
+</head>
+<body>
+  <!-- 3种方式实现CSS方式实现左侧宽度固定，右侧自适应布局 -->
+  <!-- TODO 1 flex -->
+  <div class="wrapper item-one">
+    <div class="left">flex</div>
+    <div class="right">flex</div>
+  </div>
+  <!-- TODO 2 float -->
+  <div class="wrapper item-two">
+    <div class="left">float</div>
+    <div class="right">float</div>
+  </div>
+  <!-- TODO 3 position -->
+  <div class="wrapper item-three">
+    <div class="left">position</div>
+    <div class="right">position</div>
+  </div>
+</body>
+</html>

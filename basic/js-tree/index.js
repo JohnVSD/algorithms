@@ -68,6 +68,7 @@ let treeData = [
   }
 ];
 
+// 深度优先
 function treeFilter(tree, func){
   return tree.filter(node => {
     node.children = node.children && treeFilter(node.children, func)

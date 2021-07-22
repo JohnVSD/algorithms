@@ -1,5 +1,6 @@
 /**
  * TODO 实现 PickPromise，能够获取泛型的类型，例如
+ * 文档 https://www.typescriptlang.org/docs/handbook/release-notes/typescript-2-8.html
  * type A = Promise<number>
  * type B = PickPromise<A> // number
  */ 

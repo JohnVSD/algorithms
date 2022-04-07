@@ -5,8 +5,28 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>策略模式测试</title>
+    <style>
+      .demo {
+        width: 100px;
+        height: 100px;
+        border-radius: 50px;
+        background: rgb(242, 136, 206);
+        line-height: 100px;
+        text-align: center;
+        color: white;
+        font-size: 40px;
+      }
+    </style>
   </head>
   <body>
-    <div>哈哈哈</div>
+    <div id="div" style="position: absolute;" class="demo">
+      球
+    </div>
+    <script src="./5.4_animate.js"></script>
+    <script>
+      var div = document.getElementById("div");
+      var animate = new Animate(div);
+      animate.start( 'top', 500, 1500, 'easeIn' );
+    </script>
   </body>
 </html>

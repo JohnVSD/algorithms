@@ -7,6 +7,7 @@ var CreateDiv = function(html) {
 
 CreateDiv.prototype.init = function () {
   var div = document.createElement('div');
+  console.log('输出什么：', this.html);
   div.innerHTML = this.html;
   document.body.appendChild(div);
 }
@@ -17,7 +18,7 @@ var ProxySingletonCreateDiv = (function() {
 
   return function(html) {
     if (!instance) {
-      return instance = new CreateDiv();
+      return instance = new CreateDiv(html);
     }
     return instance;
   }

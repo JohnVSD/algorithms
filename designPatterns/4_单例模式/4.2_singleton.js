@@ -1,3 +1,4 @@
+// 透明的单例模式
 var CreateDiv = (function () {
   
   var instance;

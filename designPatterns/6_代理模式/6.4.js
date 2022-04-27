@@ -1,3 +1,5 @@
+// 代理和本体接口的一致性
+
 var myImage = (function(){
     var imgNode = document.createElement("img");
     document.body.appendChild(imgNode);
@@ -14,7 +16,7 @@ var proxyImage = (function () {
     }
 
     return function(src) {
-        myImage('./6bf419d17f5d958e851112e0770ee37a.gif')
+        myImage('../images/6bf419d17f5d958e851112e0770ee37a.gif')
         img.src = src;
     }
 })()
